@@ -1,0 +1,53 @@
+<div class="headerContainerWrapperSticky">
+  <div class="headerContainer">
+    <div id="header-logo-search">
+      <div class="logoContainer">
+        <a href="/">
+          <img
+            id="logo"
+            src="/logo.svg"
+            alt="logo"
+            title="Talkabout&nbsp;Home"
+          />
+        </a>
+      </div>
+      <input id="search-bar-input" placeholder="Search..." />
+      <button id="search-bar-button" type="submit">
+        <i class="fa fa-search"></i>
+      </button>
+      <a href="/">
+        <button class="navlink-button" id="navlink-home-button">
+          Home
+        </button></a
+      >
+      <a href="/my_conversations" id="navlink-my-talks-link">
+        <button class="navlink-button" id="navlink-my-talks-button">
+          <span>My Conversations</span><span class="notification-badge"></span>
+        </button>
+      </a>
+      <a href="/create">
+        <button class="navlink-button" id="navlink-create-button">
+          Create
+        </button></a
+      >
+
+      <div class="header-dropdown">
+        <button
+          class="header-dropdown-toggle navlink-button"
+          type="button"
+          id="dropdownMenuButton"
+        >
+          <i class="fa fa-ellipsis-h"></i>
+        </button>
+        <div class="header-dropdown-content dropdown-menu-center">
+          <a class="header-dropdown-item" href="#">About</a>
+          <a class="header-dropdown-item" href="#">Contact</a>
+          <a class="header-dropdown-item" href="#">Privacy Policy</a>
+          <a class="header-dropdown-item" href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/header.js"></script>
