@@ -6,9 +6,11 @@ const parser = document.createElement("a");
 parser.href = window.location.href;
 if (parser.pathname.substring(0, 5) === "/tag/") {
   tag = parser.pathname.substring(5);
+  if (tag.charAt(tag.length - 1) === "/") tag = tag.slice(0, -1);
 } else if (parser.pathname === "/search") {
   q = new URL(window.location.href).searchParams.get("q");
 }
+
 const homeContainer = document.getElementById("home-container");
 const homeTopTags = document.getElementById("home-top-tags");
 const postList = document.getElementById("home-post-list");
