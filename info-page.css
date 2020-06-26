@@ -1,0 +1,48 @@
+.info-page-container {
+  margin-top: 75px;
+  margin-left: 30px;
+  width: 70%;
+}
+.info-page-title {
+  font-size: 24px;
+}
+.info-page-date {
+  font-size: 16px;
+  color: rgb(150, 150, 150);
+}
+.paragraph {
+  line-height: 1.5;
+}
+.paragraph-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.paragraph-list-title {
+  font-size: 18px;
+}
+.paragraph-list-item {
+  margin-bottom: 10px;
+}
+.paragraph-list-item p {
+  display: inline;
+}
+.paragraph-list-item-title {
+  font-style: italic;
+}
+@media screen and (max-width: 768px) {
+  .info-page-container {
+    width: 90%;
+    margin: auto;
+    margin-top: 75px;
+  }
+}
+
+#contact-success {
+  font-size: 18px;
+  color: green;
+}
+a {
+  color: dodgerblue;
+}

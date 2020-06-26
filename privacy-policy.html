@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Toy Chat Application" />
+    <title>Convabout</title>
+
+    <!--<link rel="shortcut icon" href= "favicon.ico" >-->
+    <link rel="icon" type="image/png" sizes="196x196" href="/favicon-192.png" />
+    <link rel="icon" type="image/png" sizes="160x160" href="/favicon-160.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png" />
+    <link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/favicon-57.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon-72.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon-144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon-60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon-120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon-76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon-152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/favicon-144.png" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/info-page.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <div class="headerContainerWrapperSticky">
+      <div class="headerContainer">
+        <div id="header-logo-search">
+          <div class="logoContainer">
+            <a href="/">
+              <img
+                id="logo"
+                src="/logo.svg"
+                alt="logo"
+                title="Talkabout&nbsp;Home"
+              />
+            </a>
+          </div>
+          <input id="search-bar-input" placeholder="Search..." />
+          <button
+            id="search-bar-button"
+            type="submit"
+            onclick="onSearchBarButtonClick()"
+          >
+            <i class="fa fa-search"></i>
+          </button>
+          <a href="/">
+            <button class="navlink-button" id="navlink-home-button">
+              Home
+            </button></a
+          >
+          <a href="/my_conversations" id="navlink-my-talks-link">
+            <button class="navlink-button" id="navlink-my-talks-button">
+              <span>My Conversations</span
+              ><span class="notification-badge"></span>
+            </button>
+          </a>
+          <a href="/create">
+            <button class="navlink-button" id="navlink-create-button">
+              Create
+            </button></a
+          >
+          <div class="header-dropdown">
+            <button
+              class="header-dropdown-toggle navlink-button"
+              type="button"
+              id="dropdownMenuButton"
+            >
+              <i class="fa fa-ellipsis-h"></i>
+            </button>
+            <div class="header-dropdown-content dropdown-menu-center">
+              <a class="header-dropdown-item" href="/about">About</a>
+              <a class="header-dropdown-item" href="/contact">Contact</a>
+              <a class="header-dropdown-item" href="/terms-of-service"
+                >Terms of Service</a
+              >
+              <a class="header-dropdown-item" href="/privacy-policy"
+                >Privacy Policy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Header END-->
+
+    <!--Privacy Policy-->
+    <div class="info-page-container">
+      <p class="info-page-title">Privacy Policy</p>
+      <p class="info-page-date">
+        Effective June 25, 2020
+      </p>
+      <p class="paragraph">
+        Welcome to Convabout! Convabout is a messaging service that allows users
+        to start, share, discover and participate in conversations on different
+        topics. The Convabout website is referred to as the “Service”.
+      </p>
+
+      <p class="paragraph-title">What We Collect</p>
+
+      <p class="paragraph-list-title">
+        Information You Provide to Us
+      </p>
+      <p class="paragraph">
+        We collect information you provide to us directly when you use the
+        Service. This includes:
+      </p>
+      <div class="paragraph-list-item">
+        <p class="paragraph-list-item-title">Content you submit.</p>
+        <p class="paragraph">
+          We collect the content you submit to the Service. This includes your
+          posts and your messages with other users.
+        </p>
+      </div>
+      <p class="paragraph-list-title">
+        Information We Collect Automatically
+      </p>
+      <p class="paragraph">
+        When you access or use our Services, we may also automatically collect
+        information about you. This includes:
+      </p>
+      <div class="paragraph-list-item">
+        <p class="paragraph-list-item-title">Log and usage data.</p>
+        <p class="paragraph">
+          We may log information when you access and use the Service. This may
+          include your IP address, user-agent string, browser type, operating
+          system, referral URLs, device information (e.g., device IDs), pages
+          visited, links clicked, the requested URL, hardware settings, and
+          search terms.
+        </p>
+      </div>
+      <div class="paragraph-list-item">
+        <p class="paragraph-list-item-title">
+          Information collected from cookies and similar technologies.
+        </p>
+        <p class="paragraph">
+          We may receive information from cookies, which are pieces of data your
+          browser stores and sends back to us when making requests, and similar
+          technologies. We use this information to improve your experience,
+          understand user activity, and improve the quality of the Service.
+        </p>
+      </div>
+      <div class="paragraph-list-item">
+        <p class="paragraph-list-item-title">
+          Analytics.
+        </p>
+        <p class="paragraph">
+          We use Google Analytics, a web analytics service provided by Google,
+          Inc. (“Google”). Google Analytics uses cookies to help us analyze how
+          users use the Service and enhance your experience when you use the
+          Service. For more information on how Google uses this data, go to
+          <a href="www.google.com/policies/privacy/partners/"
+            >www.google.com/policies/privacy/partners/</a
+          >
+          .
+        </p>
+      </div>
+      <div class="paragraph-list-item">
+        <p class="paragraph-list-item-title">
+          reCAPTCHA.
+        </p>
+        <p class="paragraph">
+          We use reCAPTCHA, a web security service provided by Google, Inc.
+          (“Google”). Google reCAPTCHA uses cookies to provide protection from
+          spam and abuse to the Service. For more information on how Google uses
+          this data, go to
+          <a href="www.google.com/policies/privacy/partners/"
+            >www.google.com/policies/privacy/partners/</a
+          >.
+        </p>
+      </div>
+      <p class="paragraph-title">How We Use Information About You</p>
+      <p class="paragraph">
+        We use information about you to: Provide, maintain, and improve the
+        Service; Research and develop new services; Help protect the safety of
+        Convabout and our users, which includes blocking suspected spammers,
+        addressing abuse, and enforcing the Convabout user agreement and our
+        other policies; Send you technical notices, updates, security alerts,
+        invoices and other support and administrative messages; Monitor and
+        analyze trends, usage, and activities in connection with our Service.
+      </p>
+      <p class="paragraph-title">Your Choices</p>
+      <p class="paragraph-list-title">
+        Controlling the Use of Cookies
+      </p>
+      <p class="paragraph">
+        Most web browsers are set to accept cookies by default. If you prefer,
+        you can usually choose to set your browser to remove or reject first-
+        and third-party cookies. Please note that if you choose to remove or
+        reject cookies, this could affect the availability and functionality of
+        our Services.
+      </p>
+      <p class="paragraph-list-title">
+        Controlling Analytics
+      </p>
+      <p class="paragraph">
+        Some analytics providers we partner with may provide specific opt-out
+        mechanisms and we may provide, as needed and as available, additional
+        tools and third-party services that allow you to better understand
+        cookies and how you can opt-out. For example, you may manage the use and
+        collection of certain information by Google Analytics
+        <a href="https://tools.google.com/dlpage/gaoptout">here</a>.
+      </p>
+      <p class="paragraph-list-title">
+        Do Not Track
+      </p>
+      <p class="paragraph">
+        Our Site currently does not respond to “Do Not Track” (“DNT”) signals
+        and operates as described in this Privacy Policy whether or not a DNT
+        signal is received. If we do respond to DNT signals in the future, we
+        will update this Privacy Policy to describe how we do so.
+      </p>
+      <p class="paragraph-title">Information Security</p>
+      <p class="paragraph">
+        We take measures to help protect information about you from loss, theft,
+        misuse and unauthorized access, disclosure, alteration, and destruction.
+        For example, we use HTTPS while information is being transmitted. We
+        also enforce technical and administrative access controls to limit which
+        of our employees have access to non-public personal information.
+      </p>
+      <p class="paragraph-title">Data Retention</p>
+      <p class="paragraph">
+        We store the information we collect for as long as it is necessary for
+        the purpose(s) for which we originally collected it. We may retain
+        certain information for legitimate business purposes or as required by
+        law.
+      </p>
+      <p class="paragraph-title">International Data Transfers</p>
+      <p class="paragraph">
+        By using our Service, you understand and acknowledge that your Personal
+        Information will be transferred from your location to our facilities and
+        servers in the United States.
+      </p>
+      <p class="paragraph-title">Children</p>
+      <p class="paragraph">
+        Our Service is not directed to children who are under the age of 13.
+        Convabout does not knowingly collect Personal Information from children
+        under the age of 13. If you have reason to believe that a child under
+        the age of 13 has provided Personal Information to Convabout through the
+        Service please contact us and we will endeavor to delete that
+        information from our databases.
+      </p>
+      <p class="paragraph-title">Changes to the Privacy Policy</p>
+      <p class="paragraph">
+        The Service and our business may change from time to time. As a result
+        we may change this Privacy Policy at any time. When we do we will post
+        an updated version on this page, unless another type of notice is
+        required by the applicable law. By continuing to use our Service or
+        providing us with Personal Information after we have posted an updated
+        Privacy Policy, or notified you by other means if applicable, you
+        consent to the revised Privacy Policy and practices described in it.
+      </p>
+      <p class="paragraph-title">Contact Us</p>
+      <p class="paragraph">
+        If you have any questions about our Privacy Policy or information
+        practices or need to access this Privacy Policy in a different format,
+        please feel free to contact us at <a href="/contact">Contact</a>.
+      </p>
+    </div>
+    <!--Privacy Policy END-->
+
+    <script>
+      // Let the document know when the mouse is being used
+      document.body.addEventListener("mousedown", function () {
+        document.body.classList.add("using-mouse");
+      });
+
+      // Re-enable focus styling when Tab is pressed
+      document.body.addEventListener("keydown", function (event) {
+        if (event.keyCode === 9) {
+          document.body.classList.remove("using-mouse");
+        }
+      });
+    </script>
+
+    <script type="module" src="/header.js"></script>
+  </body>
+</html>

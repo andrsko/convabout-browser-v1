@@ -9,7 +9,9 @@ body.using-mouse :active :hover {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
-
+p {
+  color: rgb(55, 55, 55);
+}
 @media screen and (max-width: 768px) {
   .logoContainer {
     margin-left: 15px !important;
@@ -22,7 +24,6 @@ body.using-mouse :active :hover {
   }
   .navlink-button {
     margin-right: 5px !important;
-
     padding: 5px !important;
   }
   #search-bar-button {
@@ -217,6 +218,9 @@ body.using-mouse :active :hover {
   transform: translate(-50%, 0) !important;
 }
 
+.dropdown-menu-right {
+  right: 0;
+}
 #home-no-posts-message {
   margin-bottom: 25px;
   font-size: 18px;
@@ -335,16 +339,18 @@ body.using-mouse :active :hover {
   border-bottom: 1px solid rgb(235, 235, 235);
 }
 #search-bar-input {
-  height: 30px;
+  height: 26px;
   padding-left: 10px;
   border: 1px solid rgb(195, 195, 195);
   border-right: 0px;
+  box-sizing: content-box;
   border-bottom-left-radius: 3px !important;
   border-top-left-radius: 3px !important;
   border-bottom-right-radius: 0px !important;
   border-top-right-radius: 0px !important;
   margin-right: 0px !important;
   width: 25vw;
+  font-size: 14px;
 }
 
 #search-bar-button {
@@ -357,7 +363,7 @@ body.using-mouse :active :hover {
   border-left: 0px;
   margin-right: 25px;
   padding: 10px;
-  font-size: 17px;
+  font-size: 14px;
   color: rgb(135, 135, 135);
   margin-left: 0 !important;
   border-bottom-right-radius: 3px !important;
@@ -365,6 +371,7 @@ body.using-mouse :active :hover {
   border-bottom-left-radius: 0px !important;
   border-top-left-radius: 0px !important;
   background: transparent;
+  cursor: pointer;
 }
 
 #search-bar-button:hover {
@@ -373,11 +380,12 @@ body.using-mouse :active :hover {
 
 .navlink-button {
   background-color: transparent;
-
+  font-size: 14px !important;
   margin-right: 7px;
   color: rgb(55, 55, 55);
-  padding: 7px;
+  padding: 9px;
   border: none;
+  cursor: pointer;
 }
 .navlink-button:hover {
   border-radius: 15px;
@@ -711,8 +719,29 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+#create-post-div textarea {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#create-post-div input {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+}
 #create-post-title {
   font-size: 24px;
+}
+label {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: rgb(50, 50, 50);
 }
 @media all and (max-width: 1024px) {
   #home-container {
@@ -727,6 +756,9 @@ body {
     margin: 15px;
   }
 }
+#contact-textarea-name {
+  margin-top: 1px;
+}
 #submit-post-button {
   margin-top: 10px;
   height: 40px;
@@ -740,6 +772,10 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   font-size: 18px;
+}
+#submit-post-button.contact-submit {
+  margin-top: 20px;
+  width: 110px;
 }
 #submit-post-button:active:hover {
   background-color: rgb(132, 183, 255);

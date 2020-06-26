@@ -28,15 +28,10 @@
 
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="info-page.css" />
   </head>
   <body>
     <!--Header-->
@@ -47,7 +42,7 @@
             <a href="/">
               <img
                 id="logo"
-                src="/logo.svg"
+                src="logo.svg"
                 alt="logo"
                 title="Talkabout&nbsp;Home"
               />
@@ -86,16 +81,61 @@
               <i class="fa fa-ellipsis-h"></i>
             </button>
             <div class="header-dropdown-content dropdown-menu-center">
-              <a class="header-dropdown-item" href="#">About</a>
-              <a class="header-dropdown-item" href="#">Contact</a>
-              <a class="header-dropdown-item" href="#">Privacy Policy</a>
-              <a class="header-dropdown-item" href="#">Terms of Service</a>
+              <a class="header-dropdown-item" href="/about">About</a>
+              <a class="header-dropdown-item" href="/contact">Contact</a>
+              <a class="header-dropdown-item" href="/terms-of-service"
+                >Terms of Service</a
+              >
+              <a class="header-dropdown-item" href="/privacy-policy"
+                >Privacy Policy</a
+              >
             </div>
           </div>
         </div>
       </div>
     </div>
     <!--Header END-->
+
+    <!--Create-->
+    <div id="create-post-div">
+      <h1 id="create-post-title">
+        Contact us
+      </h1>
+      <form action="" method="POST">
+        <label for="contact-textarea-message">Message:</label><br>
+        <textarea
+          id="contact-textarea-message"
+          rows="2"
+          cols="75"
+          maxlength="500"
+        ></textarea>
+        <p id="fill-in-title-error">Please, fill in the message</p>
+        <br />
+        <label for="contact-textarea-name">Name:</label><br>
+        <input
+          id="contact-textarea-name"
+          maxlength="100"
+        ></input>
+        <br />        <label for="contact-textarea-email">Email address:</label><br><input
+          id="contact-textarea-email" maxlength="100"
+        ></input
+        ><br />
+        <!-- IMPORTANT: change to corresponding site key on production-->
+        <!-- for testing next keys can be used:
+          Site key: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI, Secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
+          https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do
+        -->
+        <button
+          id="submit-post-button"
+          class="contact-submit g-recaptcha"
+          data-sitekey="6Lf846cZAAAAAGCbhgAu2jY0aFNJIhGxomKR6b2U"
+          data-callback="onSubmit"
+        >
+          SUBMIT
+        </button>
+      </form>
+    </div>
+    <!--Create END-->
 
     <script>
       // Let the document know when the mouse is being used
@@ -110,9 +150,8 @@
         }
       });
     </script>
-    <script src="django_eventstream/eventsource.min.js"></script>
-    <script src="reconnecting-eventsource.js"></script>
-    <script src="reconnecting-websocket.min.js" type="text/javascript"></script>
-    <script type="module" src="header.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="module" src="/header.js"></script>
+    <script type="module" src="/contact.js"></script>
   </body>
 </html>
