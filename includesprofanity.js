@@ -1,9 +1,23 @@
+//to do: before and after sign, ex. ".word", "word."
 export const includesProfanity = (text) => {
-  if (profanityWords.some((word) => text.includes(word))) {
+  if (profanityWords.some((word) => text.includes(" " + word + " "))) {
     return true;
   }
   return false;
 };
+
+//debug version
+/*export const includesProfanity = (text) => {
+  if (
+    profanityWords.some((word) => {
+      console.log(word);
+      return text.includes(word);
+    })
+  ) {
+    return true;
+  }
+  return false;
+};*/
 
 const profanityWords = [
   "ahole",
@@ -11,7 +25,7 @@ const profanityWords = [
   "ash0le",
   "ash0les",
   "asholes",
-  " ass ",
+  "ass",
   //"ass", associated
   "Ass Monkey",
   "Assface",
@@ -51,7 +65,7 @@ const profanityWords = [
   "CockSucker",
   "cock-sucker",
   "crap",
-  "cum",
+  "cum", //document
   "cunt",
   "cunts",
   "cuntz",
@@ -239,7 +253,7 @@ const profanityWords = [
   "Slutty",
   "slutz",
   "son-of-a-bitch",
-  " tit ",
+  "tit",
   //"tit ", title
   "turd",
   "va1jina",

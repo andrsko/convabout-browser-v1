@@ -66,12 +66,12 @@ function replaceWithText() {
   ).style.visibility = notificationBadgeVisibility;
   createButton.innerHTML = `Create`;
 }
-
+/*
 if (window.innerWidth < 769) {
   replaceWithIcons();
   headerDropdownContent.classList.remove("dropdown-menu-center");
   headerDropdownContent.classList.add("dropdown-menu-right");
-}
+}*/
 
 window.addEventListener("resize", onWindowResizeNavbar);
 function onWindowResizeNavbar() {
@@ -85,3 +85,5 @@ function onWindowResizeNavbar() {
     headerDropdownContent.classList.add("dropdown-menu-center");
   }
 }
+
+onWindowResizeNavbar();

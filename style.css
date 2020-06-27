@@ -37,18 +37,18 @@ p {
     margin-left: 0 !important;
   }
   #home-top-tags {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
   #home-no-posts-message {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 3%;
+    padding-right: 3%;
   }
   .post {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 7px;
+    padding-bottom: 7px;
     border-bottom: 1px solid rgb(235, 235, 235);
     margin-bottom: 0 !important;
   }
@@ -85,6 +85,11 @@ p {
 .titanic {
   float: none;
 }*/
+textarea,
+input {
+  font-family: inherit;
+  font-size: inherit;
+}
 .grecaptcha-badge {
   visibility: hidden;
 }
@@ -383,9 +388,7 @@ p {
 
 .navlink-button {
   background-color: transparent;
-  font-size: 14px !important;
   margin-right: 7px;
-  color: rgb(55, 55, 55);
   padding: 9px;
   border: none;
   cursor: pointer;
@@ -400,25 +403,32 @@ p {
 
   background-color: rgb(235, 235, 235);
 }
+.headerContainer a,
+button {
+  color: rgb(55, 55, 55);
+  font-size: 14px;
+}
 #home-container {
   margin-top: 75px;
-  margin-left: 170px;
+  margin-left: 163px;
   width: 45%;
 }
 #home-post-list {
+  margin-top: 0px;
   width: 100%;
 }
 #home-show-new-posts-div {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 50px;
   display: none;
   padding-top: 15px;
   padding-bottom: 0px;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
   background-color: white;
-  top: 0;
 }
 
 #home-show-new-posts-button {
+  cursor: pointer;
   display: none;
   width: 100%;
   border: none;
@@ -426,12 +436,11 @@ p {
   color: rgb(102, 153, 255);
   padding: 7px;
   letter-spacing: 1.5px;
+  background-color: rgb(239, 239, 239);
 }
 #home-show-new-posts-button:hover {
   background-color: rgb(230, 230, 230);
-}
-
-.top-tag {
+  color: rgb(82, 133, 255);
 }
 
 #chat-no-talks-yet {
@@ -499,7 +508,7 @@ p {
 }
 
 .post {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 .post-title:hover {
   color: rgb(102, 153, 255);
@@ -509,6 +518,7 @@ p {
   font-size: 18px;
   margin-bottom: 5px;
   margin-left: 0px;
+  margin-top: 0px;
   color: rgb(0, 102, 255);
   cursor: pointer;
 }
@@ -523,11 +533,12 @@ p {
 }
 .post-body {
   font-size: 14px;
+  margin-top: 5px;
   margin-bottom: 0;
+  line-height: 1.5em; /* fallback */
 }
 .post-body-collapsed {
   font-size: 14px;
-  margin-bottom: 0;
   overflow: hidden;
   text-overflow: ellipsis;
 
@@ -554,7 +565,7 @@ p {
 }
 
 .post-tag {
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(239, 239, 239);
   color: rgb(115, 115, 115);
   border-radius: 3px;
   display: inline-block;
@@ -564,10 +575,11 @@ p {
   transition-duration: 0.4s;
   cursor: pointer;
   margin-right: 5px;
-  margin-bottom: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 .post-tag:hover {
-  background-color: rgb(195, 195, 195);
+  background-color: rgb(215, 215, 215);
   color: rgb(55, 55, 55);
 }
 
@@ -735,6 +747,7 @@ body {
 }
 #create-post-title {
   font-size: 24px;
+  font-weight: normal;
 }
 label {
   display: inline-block;

@@ -37,7 +37,7 @@ let alreadyInteractingPostIds = [];
 let activePosts = [];
 
 let activeTag = "";
-const NUMBER_OF_TOP_TAGS = 10;
+const NUMBER_OF_TOP_TAGS = 15;
 
 function drawTopTags() {
   let tagCounts = {};
@@ -103,16 +103,13 @@ function drawPosts(data, areNew) {
             .split(",")
             .map((tag) => `<button class="post-tag">${tag.trim()}</button>`)
         : [];
-      const postItem = `<div class="post" id=${"post-" + data[i]["id"]}>
-                        <p class="post-title">${data[i]["title"]}</p>
-                        ${postTags.join("")}
-                        <p class="post-body post-body-collapsed">
-                          <span class="post-timestamp"> 
-                            ${timeSince(Date.parse(data[i]["timestamp"]))}
-                          </span>
-                           ${data[i]["body"] ? " · " + data[i]["body"] : ""}
-                        </p>
-                      </div>`;
+      const postItem = `<div class="post" id=${
+        "post-" + data[i]["id"]
+      }><p class="post-title">${data[i]["title"]}</p>${postTags.join(
+        ""
+      )}<p class="post-body post-body-collapsed"><span class="post-timestamp">${timeSince(
+        Date.parse(data[i]["timestamp"])
+      )}</span>${data[i]["body"] ? " · " + data[i]["body"] : ""}</p></div>`;
       const insertPosition = areNew ? "afterbegin" : "beforeend";
       postList.insertAdjacentHTML(insertPosition, postItem);
       const postElement = document.getElementById("post-" + data[i]["id"]);
