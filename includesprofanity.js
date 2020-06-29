@@ -1,10 +1,34 @@
-//to do: before and after sign, ex. ".word", "word."
+/*to do: replace with regex
+          be sure to escape special characters:
+          https://stackoverflow.com/a/14359586*/
 export const includesProfanity = (text) => {
-  if (profanityWords.some((word) => text.includes(" " + word + " "))) {
+  if (
+    profanityWords.some((word) => {
+      if (text.includes(" ")) {
+        return (
+          text.includes(" " + word + " ") ||
+          text.includes("." + word + " ") ||
+          text.includes(" " + word + ".") ||
+          text.includes("?" + word + " ") ||
+          text.includes(" " + word + "?") ||
+          text.includes("!" + word + " ") ||
+          text.includes(" " + word + "!") ||
+          text.includes("," + word + " ") ||
+          text.includes(" " + word + ",") ||
+          text.includes("-" + word + " ") ||
+          text.includes(" " + word + "-")
+        );
+      } else {
+        return text === word;
+      }
+    })
+  ) {
     return true;
   }
   return false;
 };
+
+const alphaCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 //debug version
 /*export const includesProfanity = (text) => {
