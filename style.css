@@ -592,13 +592,17 @@ button {
   padding-right: 10px;
   background-color: white;
 }
+
 .post-tag.top-tag.active {
-  background-color: rgb(205, 205, 205);
-  color: rgb(85, 85, 85);
+  background-color: rgb(155, 155, 155);
+  color: white;
+  border: 0px;
 }
 .post-tag.top-tag:hover {
-  background-color: rgb(205, 205, 205);
-  color: rgb(85, 85, 85);
+  background-color: rgb(235, 235, 235);
+}
+.post-tag.top-tag.active:hover {
+  background-color: rgb(180, 180, 180);
 }
 
 .already-talking {
