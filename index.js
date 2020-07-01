@@ -97,7 +97,7 @@ function drawPosts(data, areNew) {
       "home-no-posts-message"
     );
     if (noPostsMessageElement) noPostsMessageElement.remove();
-    for (let i = data.length - 1; i >= 0; --i) {
+    for (let i = 0; i < data.length - 1; ++i) {
       const postTags = data[i]["tags"]
         ? data[i]["tags"]
             .split(",")
