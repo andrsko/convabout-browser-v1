@@ -558,6 +558,7 @@ button {
   background-color: transparent;
   color: rgb(151, 151, 151);
   border: none;
+  cursor: pointer;
 }
 
 .post-timestamp {
