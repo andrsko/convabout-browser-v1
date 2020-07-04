@@ -22,7 +22,7 @@ p {
   }
   #search-bar-input {
     padding-left: 10px;
-
+    margin-left: 0px !important;
     width: 15vw !important;
   }
   .navlink-button {
@@ -49,42 +49,24 @@ p {
     padding-right: 3%;
     padding-top: 7px;
     padding-bottom: 7px;
-    border-bottom: 1px solid rgb(235, 235, 235);
-    margin-bottom: 0 !important;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    margin-bottom: 7px !important;
   }
   #create-post-div {
     margin-left: 5% !important;
     width: 90% !important;
   }
-}
-/*
-.topnav {
-  display: flex;
-
-  align-items: center;
-}
-@media screen and (max-width: 768px) {
-  .topnav.responsive {
-    position: relative;
+  #create-post-div textarea {
+    height: 7em;
   }
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+  .col-md-8 {
+    margin: 15px;
   }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
+  .go-to {
+    margin-top: -11px !important;
   }
-}
-.topnav .icon {
-  display: none;
 }
 
-.titanic {
-  float: none;
-}*/
 textarea,
 input {
   font-family: inherit;
@@ -163,27 +145,101 @@ input {
     left: -100%;
   }
 }
-.loader-bar-container {
-  width: 100%;
-  margin: 0;
-  margin-bottom: 5px;
-  padding: 0;
-  overflow: hidden;
-  position: relative;
-}
+
 .loader-bar-wrapper {
-  height: 3px;
+  top: 0;
   width: 100%;
+  margin-left: 0px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
 }
 .loader-bar-wrapper .loader-bar {
-  width: 100%;
   position: absolute;
+  width: 100%;
   height: 3px;
+
   background-color: rgb(102, 153, 255);
   animation-name: loader-bar-animation;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+}
+
+.post-action {
+  float: right;
+  font-size: 12px;
+  color: rgb(102, 153, 255);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.disabled {
+  cursor: auto;
+  color: rgb(205, 205, 205);
+}
+.go-to {
+  font-size: 25px;
+  margin-top: -12px;
+  margin-bottom: -9px;
+}
+
+.post-status {
+  float: none;
+  display: inline;
+  cursor: default;
+  margin-left: 10px;
+  border-radius: 3px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.already-going {
+  color: rgb(153, 122, 0);
+  background-color: rgb(255, 235, 153);
+}
+.no-response-yet {
+  color: rgb(155, 155, 155);
+  background-color: rgb(245, 245, 245);
+}
+.being-responded-to {
+  color: rgb(20, 82, 20);
+  background-color: rgb(194, 240, 194);
+}
+
+.already-going-error-message {
+  display: inline-block;
+  text-align: left;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  margin-left: 0px;
+  cursor: default;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+#index-create {
+  padding: 15px;
+}
+#index-create-input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid rgb(235, 235, 235);
+  padding: 10px;
+  border-radius: 3px;
+}
+#index-create-input:hover {
+  border: 1px solid rgb(102, 153, 255);
 }
 
 .nav-link {
@@ -252,6 +308,7 @@ input {
   padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  background-color: white !important;
 }
 .row {
   margin-bottom: 20px;
@@ -267,7 +324,7 @@ input {
   padding: 5px;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(235, 235, 255);
   width: 100% !important;
   top: 0;
   left: 0;
@@ -285,7 +342,6 @@ input {
   background-color: white !important;
   padding-left: 25px;
   height: 50px;
-  margin-bottom: 15px;
   border-bottom: 1px solid rgb(235, 235, 235);
 }
 #header-toggler {
@@ -302,7 +358,6 @@ input {
 .headerContainer {
   background-color: white;
   height: 50px;
-  margin-bottom: 15px;
   display: flex;
   align-items: center;
   margin-left: auto;
@@ -347,6 +402,7 @@ input {
   border-bottom: 1px solid rgb(235, 235, 235);
 }
 #search-bar-input {
+  margin-left: 15px;
   height: 26px;
   padding-left: 10px;
   border: 1px solid rgb(195, 195, 195);
@@ -410,29 +466,31 @@ button {
 }
 #home-container {
   margin-top: 75px;
-  margin-left: 163px;
-  width: 45%;
+  margin-left: 12%;
+  width: 610px;
 }
 #home-post-list {
   margin-top: 0px;
   width: 100%;
 }
 #home-show-new-posts-div {
+  display: none;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 50px;
   display: none;
-  padding-top: 15px;
+  padding-top: 5px;
   padding-bottom: 0px;
-  background-color: white;
+  background-color: transparent;
   margin-bottom: 10px;
 }
 
 #home-show-new-posts-button {
   cursor: pointer;
   display: none;
-  width: 100%;
+  width: 50%;
   border: none;
+  margin: auto;
   margin-bottom: 0px;
   color: rgb(102, 153, 255);
   padding: 7px;
@@ -471,7 +529,7 @@ button {
 
 /* Track */
 .container ::-webkit-scrollbar-track {
-  background: white;
+  background: transparent;
 }
 
 /* Handle */
@@ -509,19 +567,21 @@ button {
 }
 
 .post {
-  margin-bottom: 30px;
-}
-.post-title:hover {
-  color: rgb(102, 153, 255);
+  margin-bottom: 10px;
+  border: 1px solid rgb(225, 225, 225);
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
 }
 
 .post-title {
-  font-size: 18px;
-  margin-bottom: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
   margin-left: 0px;
   margin-top: 0px;
-  color: rgb(0, 102, 255);
-  cursor: pointer;
+  line-height: 1.25em;
 }
 
 .chat-post {
@@ -564,65 +624,9 @@ button {
 .post-timestamp {
   color: rgb(151, 151, 151);
   display: inline-block;
+  font-size: 14px;
 }
 
-.post-tag {
-  background-color: rgb(239, 239, 239);
-  color: rgb(115, 115, 115);
-  border-radius: 3px;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  border: none;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  margin-right: 5px;
-  margin-top: 2px;
-  margin-bottom: 2px;
-}
-.post-tag:hover {
-  background-color: rgb(215, 215, 215);
-  color: rgb(55, 55, 55);
-}
-
-.post-tag.top-tag {
-  border-radius: 15px;
-  border: 1px solid rgb(215, 215, 215);
-  padding: 3px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: white;
-}
-
-.post-tag.top-tag.active {
-  background-color: rgb(155, 155, 155);
-  color: white;
-  border: 0px;
-}
-.post-tag.top-tag:hover {
-  background-color: rgb(235, 235, 235);
-}
-.post-tag.top-tag.active:hover {
-  background-color: rgb(180, 180, 180);
-}
-
-.already-talking {
-  background-color: rgb(255, 255, 155);
-  color: rgb(115, 115, 115);
-  border-radius: 5px;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  margin-left: 0px;
-  transition-duration: 0.4s;
-  cursor: default;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
-.already-talking:hover {
-  background-color: rgb(255, 255, 155);
-  color: rgb(115, 115, 115);
-}
 .already-talking-error-message {
   text-align: left;
 }
@@ -726,17 +730,22 @@ button {
 
 body {
   font-size: 15px;
+  background-color: rgb(245, 245, 245);
 }
 
 #create-post-div {
   margin-top: 75px;
   margin-left: 15%;
-  width: 50%;
+  width: 650px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 #create-post-div textarea {
+  border-color: rgb(235, 235, 235);
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 16px;
   width: 100%;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -744,6 +753,7 @@ body {
   box-sizing: border-box;
 }
 #create-post-div input {
+  border: 1px solid rgb(235, 235, 235);
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -751,9 +761,43 @@ body {
   width: 100%;
   padding: 5px;
 }
+#create-post-div textarea:hover {
+  border-color: rgb(102, 153, 255);
+}
+#create-post-div textarea:focus {
+  border-color: rgb(102, 153, 255);
+}
+#create-post-div input:hover {
+  border-color: rgb(102, 153, 255);
+}
+#create-post-div input:focus {
+  border-color: rgb(102, 153, 255);
+}
+#create-form-container {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+#create-post-div textarea::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(215, 215, 215);
+  opacity: 1; /* Firefox */
+}
+
+#create-post-div textarea:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(215, 215, 215);
+}
+
+#create-post-div textarea::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(215, 215, 215);
+}
 #create-post-title {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
+  margin-bottom: 10px;
+  margin-left: 5px;
 }
 label {
   display: inline-block;
@@ -761,19 +805,7 @@ label {
   padding-bottom: 5px;
   color: rgb(50, 50, 50);
 }
-@media all and (max-width: 1024px) {
-  #home-container {
-    margin-left: 15%;
-    width: 70%;
-  }
-  #create-post-div {
-    margin-left: 15%;
-    width: 65%;
-  }
-  .col-md-8 {
-    margin: 15px;
-  }
-}
+
 #contact-textarea-name {
   margin-top: 1px;
 }
@@ -829,10 +861,4 @@ textarea:focus {
   margin-top: 10px;
   display: none;
   font-size: 18px;
-}
-@media all and (orientation: portrait) {
-  #home-container {
-    margin-left: 15%;
-    width: 70%;
-  }
 }

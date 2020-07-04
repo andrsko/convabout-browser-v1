@@ -3,8 +3,6 @@ import { includesProfanity } from "./includesprofanity.js";
 import { isLinkOnly } from "./islinkonly.js";
 
 const textareaTitle = document.getElementById("textarea-title");
-const textareaBody = document.getElementById("textarea-body");
-const textareaTags = document.getElementById("textarea-tags");
 
 textareaTitle.focus();
 
@@ -12,11 +10,7 @@ function onSubmit(token) {
   if (textareaTitle.value) {
     if (
       isLinkOnly(textareaTitle.value) ||
-      isLinkOnly(textareaBody.value) ||
-      isLinkOnly(textareaTags.value) ||
-      includesProfanity(textareaTitle.value) ||
-      includesProfanity(textareaBody.value) ||
-      includesProfanity(textareaTags.value)
+      includesProfanity(textareaTitle.value)
     ) {
       document.getElementById("create-tos-violation-error").style.display =
         "block";
@@ -35,8 +29,6 @@ function onSubmit(token) {
 
       const data = {
         title: textareaTitle.value,
-        body: textareaBody.value,
-        tags: textareaTags.value,
         "g-recaptcha-response": token,
       };
 

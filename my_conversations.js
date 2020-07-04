@@ -42,7 +42,7 @@ function updateUserList() {
         posts = data;
         for (let post of posts) nNewMessages[post.id] = 0;
 
-        for (let i = data.length - 1; i >= 0; --i) {
+        for (let i = 0; i < data.length; ++i) {
           const postItem = `<a id=${
             data[i]["id"]
           } class="list-group-item chat-post"><span class="chat-post-title">${

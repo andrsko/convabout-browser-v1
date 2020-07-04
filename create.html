@@ -98,46 +98,38 @@
       <p id="create-post-title">
         Create a post
       </p>
-      <form action="" method="POST">
-        <textarea
-          id="textarea-title"
-          rows="2"
-          placeholder="Title"
-          maxlength="150"
-        ></textarea>
-        <p id="fill-in-title-error">Fill in the title field to create a post</p>
-        <br />
-        <textarea
-          id="textarea-body"
-          rows="4"
-          placeholder="Text (optional)"
-          maxlength="500"
-        ></textarea>
-        <br /><textarea
-          id="textarea-tags"
-          rows="2"
-          placeholder="Tags (optional, separated by comma)"
-          maxlength="150"
-        ></textarea
-        ><br />
-        <p id="create-tos-violation-error">
-          This post cannot be published due to violation of
-          <a href="/terms-of-service">Terms of Service</a>
-        </p>
-        <!-- IMPORTANT: change to corresponding site key on production-->
-        <!-- for testing next keys can be used:
+      <div id="create-form-container">
+        <form action="" method="POST">
+          <textarea
+            id="textarea-title"
+            rows="3"
+            placeholder="Title"
+            maxlength="150"
+          ></textarea>
+          <p id="fill-in-title-error">
+            Fill in the title field to create a post
+          </p>
+          <br />
+          <p id="create-tos-violation-error">
+            This post cannot be published due to violation of
+            <a href="/terms-of-service">Terms of Service</a>
+          </p>
+          <!-- IMPORTANT: change to corresponding site key on production-->
+          <!-- for testing next keys can be used:
           Site key: 6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI, Secret key: 6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
           https://developers.google.com/recaptcha/docs/faq#id-like-to-run-automated-tests-with-recaptcha.-what-should-i-do
         -->
-        <button
-          id="submit-post-button"
-          class="g-recaptcha"
-          data-sitekey="6Lf846cZAAAAAGCbhgAu2jY0aFNJIhGxomKR6b2U"
-          data-callback="onSubmit"
-        >
-          POST
-        </button>
-      </form>
+          <button
+            id="submit-post-button"
+            class="g-recaptcha"
+            data-sitekey="6Lf846cZAAAAAGCbhgAu2jY0aFNJIhGxomKR6b2U"
+            data-callback="onSubmit"
+          >
+            POST
+          </button>
+          <br style="clear: both;" />
+        </form>
+      </div>
     </div>
     <!--Create END-->
 
