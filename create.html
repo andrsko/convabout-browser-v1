@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-169903694-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-169903694-1");
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="Toy Chat Application" />
@@ -95,9 +110,7 @@
 
     <!--Create-->
     <div id="create-post-div">
-      <p id="create-post-title">
-        Create a post
-      </p>
+      <p id="create-post-title">Create a post</p>
       <div id="create-form-container">
         <form action="" method="POST">
           <textarea
@@ -127,7 +140,7 @@
           >
             POST
           </button>
-          <br style="clear: both;" />
+          <br style="clear: both" />
         </form>
       </div>
     </div>
